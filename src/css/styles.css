@@ -1,0 +1,209 @@
+:root {
+  --color-primary: rgb(49, 151, 149);
+  --color-border: #38485c;
+  --color-secondary: rgb(35, 41, 51);
+  --color-text: rgb(113, 128, 150);
+  --color-form: rgb(74, 85, 104);
+  --btn-select: #285e61;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  color: var(--color-text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--color-secondary);
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.form {
+  width: 100%;
+  color: var(--color-form);
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+}
+
+.form-title {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--color-primary);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group:last-child {
+  margin-bottom: 0;
+}
+
+.form-control {
+  display: block;
+}
+
+.form-span {
+  color: var(--color-form);
+  font-weight: 700;
+  position: absolute;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  transform: translateY(-50%);
+  background-color: #fff;
+  margin-left: 0.5rem;
+}
+
+.form-input {
+  appearance: none;
+  display: block;
+  height: 50px;
+  width: 100%;
+  background-color: #fff;
+  border: 3px solid #38485c;
+  padding: 0.75rem 0.75rem 0.5rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  box-shadow: none;
+  font-weight: 500;
+  border-radius: 0.25rem;
+  color: var(--color-text);
+}
+
+.form-select {
+  appearance: none;
+  display: block;
+  height: 50px;
+  width: 100%;
+  background-color: #fff;
+  border: 3px solid #38485c;
+  padding: 0.75rem 0.75rem 0.5rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  box-shadow: none;
+  font-weight: 500;
+  border-radius: 0.25rem;
+  background-image: url(../../images/expand-arrow.png);
+  background-position: right 0.5rem center;
+  background-size: 1.5em 1.5em;
+  background-repeat: no-repeat;
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+  font-weight: bold;
+  background-color: var(--color-primary);
+  border-radius: 0.25rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 10%),
+    0 2px 4px -1px rgba(0, 0, 0, 6%);
+}
+
+.form-btn {
+  text-transform: uppercase;
+}
+
+.hidden {
+  display: none;
+}
+
+.trivia-game {
+  border-radius: 0.25rem;
+  padding: 2rem;
+  background-color: #fff;
+}
+
+.trivia-question {
+  word-wrap: break-word;
+  color: var(--color-form);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.trivia-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.btn-option-selected {
+  background-color: var(--btn-select);
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info-difficulty,
+.currentQuestion {
+  font-weight: bold;
+}
+
+.info-difficulty-span,
+.info-currentQuestion {
+  color: var(--color-primary);
+}
+
+.nextQuestion {
+  margin-bottom: 2rem;
+}
+
+.finish-game {
+  text-align: center;
+  border-radius: 0.25rem;
+  padding: 2rem;
+  background-color: #fff;
+}
+
+.finish-title {
+  color: var(--color-primary);
+  margin-bottom: 2rem;
+}
+
+.finish-text {
+  margin-bottom: 2rem;
+}
+
+.finish-score {
+  color: var(--color-primary);
+  font-weight: 700;
+}

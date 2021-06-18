@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Trivia</title>
+    <link rel="stylesheet" href="./src/css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form class="form" id="form-trivia">
+        <h1 class="form-title">API Trivia</h1>
+        <div class="form-group">
+          <label class="form-control">
+            <span class="form-span">Number of questions</span>
+            <input
+              class="form-input"
+              type="number"
+              name="questions"
+              max="50"
+              min="0"
+              required
+            />
+          </label>
+        </div>
+        <div class="form-group">
+          <label class="form-control">
+            <span class="form-span">Category</span>
+            <select class="form-select" name="category" id="category">
+              <option value="0">Any category</option>
+              <option value="9">General culture</option>
+              <option value="10">Books</option>
+              <option value="11">Películas</option>
+              <option value="12">Films</option>
+              <option value="13">Musicals and theaters</option>
+              <option value="14">TV</option>
+              <option value="15">Video game</option>
+              <option value="16">Table games</option>
+              <option value="17">Science and nature</option>
+              <option value="18">computing</option>
+              <option value="19">Math</option>
+              <option value="20">Mythology</option>
+              <option value="21">Sports</option>
+              <option value="22">Geography</option>
+              <option value="23">Story</option>
+              <option value="24">Politics</option>
+              <option value="25">Art</option>
+              <option value="26">Celebrities</option>
+              <option value="27">Animals</option>
+              <option value="28">Cars</option>
+              <option value="29">Comics</option>
+              <option value="30">Gadgets</option>
+              <option value="31">Anime and manga</option>
+              <option value="32">Cartoons</option>
+            </select>
+          </label>
+        </div>
+        <div class="form-group">
+          <label class="form-control">
+            <span class="form-span">Difficulty</span>
+            <select class="form-select" name="difficulty" id="difficulty">
+              <option value="0">Cualquier dificultad</option>
+              <option value="easy">Easy</option>
+              <option value="medium">Medium</option>
+              <option value="hard">Hard</option>
+            </select>
+          </label>
+        </div>
+        <div class="form-group">
+          <label class="form-control">
+            <span class="form-span">Question type</span>
+            <select class="form-select" name="type" id="type">
+              <option value="0">Any kind</option>
+              <option value="multiple">Multiple</option>
+              <option value="boolean">True / False</option>
+            </select>
+          </label>
+        </div>
+        <div class="form-group">
+          <button class="btn form-btn" id="btnForm">Start</button>
+        </div>
+      </form>
+
+      <div id="trivia-game" class="trivia-game hidden">
+        <h3 class="trivia-question"></h3>
+        <div class="trivia-options">
+          <button id="first" class="btn trivia-option"></button>
+          <button id="second" class="btn trivia-option"></button>
+          <button id="third" class="btn trivia-option"></button>
+          <button id="fourth" class="btn trivia-option"></button>
+        </div>
+        <div>
+          <button id="nextQuestion" class="btn nextQuestion">Next</button>
+        </div>
+        <div class="info">
+          <p class="info-difficulty">
+            Difficulty: <span class="info-difficulty-span"></span>
+          </p>
+          <p class="currentQuestion">
+            Question:
+            <span class="info-currentQuestion"></span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Finish Game -->
+      <div id="finish-game" class="finish-game hidden">
+        <h2 class="finish-title">Finish Game!</h2>
+        <p class="finish-text">
+          Your score is <span class="finish-score"></span> points
+        </p>
+        <a href="index.html" class="btn">Try it again</a>
+      </div>
+    </div>
+    <!-- Custom JS -->
+    <script src="./src/js/index.js"></script>
+  </body>
+</html>
