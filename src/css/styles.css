@@ -39,8 +39,7 @@ body {
 }
 
 .container {
-  padding-right: 15px;
-  padding-left: 15px;
+  padding: 2rem 1rem;
   width: 100%;
   max-width: 600px;
 }
